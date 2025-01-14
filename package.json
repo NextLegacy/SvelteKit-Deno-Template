@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "devDependencies": {
+        "@inlang/paraglide-sveltekit": "^0.15.5",
+        "@iconify/json": "^2.2.295"
+    }
+}
