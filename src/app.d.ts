@@ -11,6 +11,9 @@ declare global {
 	namespace App {
 		interface Locals {
 		}
+		interface PageData {
+            metadata: MetaData;
+        }
 	}
 }
 
