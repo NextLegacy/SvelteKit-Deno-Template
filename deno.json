@@ -14,7 +14,6 @@
         "@oslojs/encoding": "npm:@oslojs/encoding@^1.1.0",
         "@std/async": "jsr:@std/async@^1.0.9",
         "@sveltejs/adapter-node": "npm:@sveltejs/adapter-node@^5.2.11",
-        "@sveltejs/kit": "npm:@sveltejs/kit@^2.15.2",
         "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.3",
         "@tailwindcss/container-queries": "npm:@tailwindcss/container-queries@^0.1.1",
         "@tailwindcss/forms": "npm:@tailwindcss/forms@^0.5.10",
@@ -40,7 +39,9 @@
         "unplugin-icons": "jsr:unplugin-icons^22.0.0",
         "vite-imagetools": "jsr:vite-imagetools^7.0.5",
         "@img/sharp-wasm32": "npm:@img/sharp-wasm32@^0.33.5",
-        "sharp": "npm:sharp@^0.33.5"
+        "sharp": "npm:sharp@^0.33.5",
+        "@inlang/paraglide-js": "npm:@inlang/paraglide-js@^2.0.0-beta.10",
+        "@sveltejs/kit": "npm:@sveltejs/kit@^2.16.0"
     },
     "nodeModulesDir": "auto"
 }

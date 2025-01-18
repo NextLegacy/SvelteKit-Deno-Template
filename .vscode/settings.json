@@ -1,5 +1,8 @@
 {
     "deno.enable": true,
     "deno.lint": true,
-    "deno.disablePaths": ["./src"]
+    "deno.disablePaths": [
+        "./src"
+    ],
+    "discord.enabled": true
 }
