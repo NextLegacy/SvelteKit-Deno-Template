@@ -1,6 +1,7 @@
 {
     "type": "module",
     "devDependencies": {
+        "@inlang/paraglide-js": "2.0.0-beta.11",
         "@inlang/paraglide-sveltekit": "^0.15.5",
         "@iconify/json": "^2.2.295"
     }

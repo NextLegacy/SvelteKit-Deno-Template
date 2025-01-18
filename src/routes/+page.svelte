@@ -11,7 +11,7 @@
 	import GermanyIcon from "~icons/circle-flags/de"
     import EnglandIcon from "~icons/circle-flags/en"
 </script>
-
+A
 <h1 class="text-5xl font-extrabold text-center my-12 text-gray-800">{m.hello_world({ name: 'SvelteKit User' })}</h1>
 <div class="flex justify-center space-x-4">
 	<button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300" onclick={() => setLocale('en')}>

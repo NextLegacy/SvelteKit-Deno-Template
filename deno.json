@@ -40,7 +40,6 @@
         "vite-imagetools": "jsr:vite-imagetools^7.0.5",
         "@img/sharp-wasm32": "npm:@img/sharp-wasm32@^0.33.5",
         "sharp": "npm:sharp@^0.33.5",
-        "@inlang/paraglide-js": "npm:@inlang/paraglide-js@^2.0.0-beta.10",
         "@sveltejs/kit": "npm:@sveltejs/kit@^2.16.0"
     },
     "nodeModulesDir": "auto"
