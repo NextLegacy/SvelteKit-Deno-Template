@@ -1,40 +1,42 @@
 <script lang="ts">
+	import * as m from "$lib/paraglide/messages.js";
 
-	import { i18n, setLocale } from '$lib/i18n';
-	import * as m from '$lib/paraglide/messages.js';
+	import TwitterX from "~icons/line-md/twitter-x-alt";
+	import InstagramFill from "~icons/line-md/instagram";
+	import LinkedInFill from "~icons/line-md/linkedin";
+	import DiscordFill from "~icons/line-md/discord";
+	import GithubFill from "~icons/line-md/github";
+	import Web from "~icons/material-symbols/web";
+	import Rocket from "~icons/fluent-emoji/rocket";
 
-	import X from "~icons/line-md/twitter-x"
-    import Instagram from "~icons/line-md/instagram";
-    import LinkedIn from "~icons/line-md/linkedin";
-    import Discord from "~icons/line-md/discord";
-
-	import GermanyIcon from "~icons/circle-flags/de"
-    import EnglandIcon from "~icons/circle-flags/en"
+	import Button from "$lib/components/Button.svelte";
 </script>
-A
-<h1 class="text-5xl font-extrabold text-center my-12 text-gray-800">{m.hello_world({ name: 'SvelteKit User' })}</h1>
-<div class="flex justify-center space-x-4">
-	<button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300" onclick={() => setLocale('en')}>
-		<EnglandIcon class="w-6 h-6 mr-2" />
-		<span>English</span>
-	</button>
-	<button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300" onclick={() => setLocale('de')}>
-		<GermanyIcon class="w-6 h-6 mr-2" />
-		<span>Deutsch</span>
-	</button>
-</div>
 
-<div class="flex justify-center space-x-6 mt-12">
-	<a class="text-gray-600 hover:text-gray-900 transition duration-300" href="https://www.instagram.com/nextlegacyy" target="_blank" aria-label="Instagram">
-		<Instagram class="w-8 h-8" />
-	</a>
-	<a class="text-gray-600 hover:text-gray-900 transition duration-300" href="https://www.linkedin.com/in/nextlegacy" target="_blank" aria-label="LinkedIn">
-		<LinkedIn class="w-8 h-8" />
-	</a>
-	<a class="text-gray-600 hover:text-gray-900 transition duration-300" href="https://x.com/nextlegacyy" target="_blank" aria-label="Twitter">
-		<X class="w-8 h-8" />
-	</a>
-	<a class="text-gray-600 hover:text-gray-900 transition duration-300" href="https://discord.com/users/454663644437938177" target="_blank" aria-label="Discord">
-		<Discord class="w-8 h-8" />
-	</a>
+<h1 class="my-12 flex items-center justify-center gap-2 text-center text-5xl font-extrabold">
+	{m.hello_world()}
+	<Rocket />
+</h1>
+
+<div class="flex flex-col items-center space-y-8">
+	<div class="flex justify-center space-x-8">
+		<Button href="https://github.com/nextlegacy" aria-label="GitHub">
+			<GithubFill class="h-8 w-8" />
+		</Button>
+		<Button href="https://www.instagram.com/nextlegacyy" aria-label="Instagram">
+			<InstagramFill class="h-8 w-8" />
+		</Button>
+		<Button href="https://www.linkedin.com/in/nextlegacy" aria-label="LinkedIn">
+			<LinkedInFill class="h-8 w-8" />
+		</Button>
+		<Button href="https://x.com/nextlegacyy" aria-label="Twitter">
+			<TwitterX class="h-8 w-8" />
+		</Button>
+		<Button href="https://discord.com/users/454663644437938177" aria-label="Discord">
+			<DiscordFill class="h-8 w-8" />
+		</Button>
+	</div>
+	<Button href="https://nextlegacy.de" class="flex items-center gap-2 space-x-2">
+		<Web />
+		<span>NextLegacy.de</span>
+	</Button>
 </div>

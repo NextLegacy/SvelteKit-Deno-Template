@@ -1,17 +1,17 @@
 import * as runtime from "$lib/paraglide/runtime";
 import { createI18n } from "@inlang/paraglide-sveltekit";
-import type { Locale } from '$lib/paraglide/runtime';
-import { page } from '$app/state';
+import type { Locale } from "$lib/paraglide/runtime";
+import { page } from "$app/state";
 
-import { goto } from '$app/navigation'
+import { goto } from "$app/navigation";
 
-const runtimeMapped = { 
+const runtimeMapped = {
 	setLanguageTag: (locale: "en" | "de" | (() => "en" | "de")) => {
-		const resolvedLocale = typeof locale === 'function' ? locale() : locale;
+		const resolvedLocale = typeof locale === "function" ? locale() : locale;
 		runtime.setLocale(resolvedLocale);
 	},
 	languageTag: runtime.getLocale,
-	onSetLanguageTag: (callback: any) => { 
+	onSetLanguageTag: (callback: any) => {
 		console.log("onSetLanguageTag is not implemented in the runtime");
 	},
 	isAvailableLanguageTag: runtime.isLocale,
@@ -25,4 +25,6 @@ export const setLocale = (newLanguage: Locale) => {
 	const canonicalPath = i18n.route(page.url.pathname);
 	const localisedPath = i18n.resolveRoute(canonicalPath, newLanguage);
 	goto(localisedPath);
-}
+};
+
+export const getLocale = runtime.getLocale;
