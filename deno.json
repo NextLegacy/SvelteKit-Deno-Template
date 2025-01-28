@@ -52,7 +52,8 @@
         "@img/sharp-wasm32": "npm:@img/sharp-wasm32@^0.33.5",
         "sharp": "npm:sharp@^0.33.5",
         "@sveltejs/kit": "npm:@sveltejs/kit@^2.16.0",
-        "@tailwindcss/postcss": "npm:@tailwindcss/postcss@^4.0.0"
+        "@tailwindcss/postcss": "npm:@tailwindcss/postcss@^4.0.0",
+        "@inlang/paraglide-js": "npm:@inlang/paraglide-js@^2.0.0-prerelease.0"
     },
     "nodeModulesDir": "auto"
 }

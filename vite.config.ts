@@ -4,7 +4,7 @@ import { imagetools } from "npm:vite-imagetools";
 import Icons from "npm:unplugin-icons/vite";
 import tailwindcss from "npm:@tailwindcss/vite";
 
-import { paraglideVitePlugin } from "npm:@inlang/paraglide-js@2.0.0-beta.11";
+import { paraglideVitePlugin } from "npm:@inlang/paraglide-js@2.0.0-beta.14";
 
 export default defineConfig({
 	plugins: [
