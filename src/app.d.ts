@@ -4,16 +4,16 @@
 import "jsr:unplugin-icons/types/svelte";
 
 declare global {
-	declare module "*&format=webp";
-	declare module "*?format=webp";
-	declare module "~icons/*";
+    declare module "*&format=webp";
+    declare module "*?format=webp";
+    declare module "~icons/*";
 
-	namespace App {
-		interface Locals {}
-		interface PageData {
-			metadata: MetaData;
-		}
-	}
+    namespace App {
+        interface Locals {}
+        interface PageData {
+            metadata: MetaData;
+        }
+    }
 }
 
 export {};

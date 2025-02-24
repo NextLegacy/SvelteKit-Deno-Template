@@ -8,7 +8,7 @@ Feel free to use it for your own projects. ✨
 
 1. Clone this repository
 2. Install dependencies with `deno install --allow-scripts`
-3. Running `deno task dev` runs the dev server most likely on port 5173 if it's available (http://localhost:5173) 
+3. Running `deno task dev` runs the dev server most likely on port 5173 if it's available (http://localhost:5173)
 4. Running `deno task build` builds the project
 5. Running `deno task preview` runs the production build
 

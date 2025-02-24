@@ -1,10 +1,9 @@
 {
     "deno.enable": true,
     "deno.lint": true,
-    "deno.disablePaths": [
-        "./src"
-    ],
+    "deno.disablePaths": ["./src"],
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "files.associations": {
         "*.css": "tailwindcss"
     },
