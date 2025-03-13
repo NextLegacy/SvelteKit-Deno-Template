@@ -1,11 +1,13 @@
 {
-    "deno.enable": true,
-    "deno.lint": true,
-    "deno.disablePaths": ["./src"],
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "deno.disablePaths": ["./src"],
     "files.associations": {
         "*.css": "tailwindcss"
     },
-    "discord.enabled": false
+    "iconify.annotations": true,
+    "iconify.inplace": false,
+    "iconifySearch.codeType": "unplugin-icons",
+    "iconifySearch.favorTabs": ["line-md"],
+    "iconifySearch.favorGroup": ""
 }

@@ -1,0 +1,14 @@
+export { default as HeartFilled } from "~icons/line-md/heart-filled";
+export { default as Discord } from "~icons/line-md/discord";
+export { default as Github } from "~icons/line-md/github";
+export { default as Twitter } from "~icons/line-md/twitter";
+export { default as TwitterX } from "~icons/line-md/twitter-x";
+export { default as Instagram } from "~icons/line-md/instagram";
+export { default as Linkedin } from "~icons/line-md/linkedin";
+export { default as Youtube } from "~icons/line-md/youtube";
+export { default as FileTypeDeno } from "~icons/vscode-icons/file-type-deno";
+export { default as FileTypeSvelte } from "~icons/vscode-icons/file-type-svelte";
+export { default as Tailwindcss } from "~icons/devicon-original/tailwindcss";
+export { default as I18n } from "~icons/material-icon-theme/i18n";
+export { default as MoonFilledToSunnyFilledLoopTransition } from "~icons/line-md/moon-filled-to-sunny-filled-loop-transition";
+export { default as SunnyFilledLoopToMoonFilledTransition } from "~icons/line-md/sunny-filled-loop-to-moon-filled-transition";

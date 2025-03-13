@@ -1,6 +1,4 @@
-import type MetaData from "$lib/components/MetaData.svelte";
-
-export const load = async () => {
+export const load = () => {
     return {
         metadata: {
             title: "Hello World 🚀",
@@ -18,15 +16,20 @@ export const load = async () => {
                 theme_color: "#000000",
 
                 og: {
+                    as: "website",
                     type: "website",
                     url: "NextLegacy.de",
                     title: "NextLegacy.de",
-                    description: "",
+                    description: "This is a SvelteKit + Deno 2.0 template I use for my projects.",
                     site_name: "NextLegacy.de",
+                    country_name: "Germany",
+                    email: "hey@nextlegacy.de",
                     locale: "de_DE",
-                    image: "/Icon512x512.png",
-                    image_width: "512",
-                    image_height: "512"
+                    image: {
+                        url: "/favicon.png",
+                        width: "32",
+                        height: "32"
+                    }
                 },
 
                 twitter: {
@@ -35,9 +38,11 @@ export const load = async () => {
                     creator: "@NextLegacy",
                     url: "NextLegacy.de",
                     title: "NextLegacy.de",
-                    description: "",
-                    image: "/Icon512x512.png",
-                    image_alt: "NextLegacy.de"
+                    description: "This is a SvelteKit + Deno 2.0 template I use for my projects.",
+                    image: {
+                        url: "/favicon.png",
+                        alt: "NextLegacy.de"
+                    }
                 }
             }
         } as MetaData

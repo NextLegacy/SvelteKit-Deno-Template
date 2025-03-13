@@ -1,0 +1,129 @@
+@import "@fontsource-variable/maven-pro";
+@import "@fontsource-variable/fira-code";
+@import "@fontsource-variable/comfortaa";
+
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@import "$lib/style/tailwind.css";
+
+@layer base {
+    @import "$lib/style/themes/base.css";
+
+    html {
+        @apply scrollbar-hover:scrollbar-thumb-accent-300 scrollbar-track-background-50 scrollbar-thin scrollbar-thumb-accent-400 scroll-smooth;
+    }
+
+    body {
+        @apply bg-background-50 text-text-950 selection:bg-accent-600 selection:text-text-50;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-family-heading);
+        font-weight: 700;
+        word-break: break-word;
+    }
+
+    h1 {
+        font-size: var(--font-size-5xl);
+    }
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+    h3 {
+        font-size: var(--font-size-3xl);
+    }
+    h4 {
+        font-size: var(--font-size-2xl);
+    }
+    h5 {
+        font-size: var(--font-size-xl);
+    }
+    h6 {
+        font-size: var(--font-size-base);
+    }
+
+    p,
+    li,
+    td,
+    th {
+        font-family: var(--font-family-body);
+        font-weight: 400;
+        font-size: var(--font-size-base);
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    a.link {
+        @apply text-accent-600 relative font-medium transition-all duration-300;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        padding-bottom: 2px;
+        transition: background-size 0.3s ease-in-out;
+
+        &:hover,
+        &:focus-visible {
+            @apply text-accent-700;
+            background-size: 100% 2px;
+        }
+
+        &:active {
+            @apply text-accent-800;
+            background-size: 85% 2px;
+        }
+
+        &:focus-visible {
+            @apply ring-accent-400/30 rounded-sm ring-2 outline-none;
+            background-size: 100% 2px;
+        }
+    }
+
+    body {
+        font-family: var(--font-family-body);
+        font-weight: 400;
+        font-size: var(--font-size-base);
+    }
+
+    hr {
+        border-color: var(--color-text-300);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            transition: none !important;
+        }
+    }
+
+    .pixelated {
+        image-rendering: pixelated;
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+}

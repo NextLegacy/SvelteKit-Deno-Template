@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "async_hooks": "node:async_hooks"
+    }
+}

@@ -1,10 +1,12 @@
-type MetaData = {
+interface MetaData {
     title?: string;
     favicon?: string;
     meta?: {
         description?: string;
 
         viewport?: string;
+
+        author?: string;
 
         mobile_web_app_capable?: "yes" | "no";
 
@@ -21,7 +23,9 @@ type MetaData = {
             type?: "website" | "article" | "book" | "profile";
             url?: string;
             title?: string;
-            description?: string;
+            // description?: string;
+            email?: string;
+            country_name?: string;
             site_name?: string;
             locale?: string;
             image?: {
@@ -37,13 +41,13 @@ type MetaData = {
             creator?: string;
             url?: string;
             title?: string;
-            description?: string;
+            // description?: string;
             image?: {
                 url?: string;
                 alt?: string;
             };
         };
     };
-};
+}
 
 export { type MetaData };

@@ -14,16 +14,10 @@ theme.subscribe((value) => {
     return value;
 });
 
-const setTheme = (value: "light" | "dark") => {
-    if (!browser) return;
-
-    theme.set(value);
-};
-
 const toggleTheme = () => {
     if (!browser) return;
 
-    theme.update((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+    theme.update((current) => (current === "light" ? "dark" : "light"));
 };
 
 export { theme, toggleTheme };

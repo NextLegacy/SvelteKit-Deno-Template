@@ -1,15 +1,18 @@
-import adapter from "@sveltejs/adapter-node";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { mdsvex } from "mdsvex";
+import deno_adapter from "svelte-adapter-deno";
 
-/** @type {import("@sveltejs/kit").Config} */
-const config = {
-    preprocess: [vitePreprocess()],
+export default {
+    preprocess: [
+        vitePreprocess(),
+        mdsvex({
+            extensions: [".md"]
+        })
+    ],
 
     kit: {
-        adapter: adapter()
+        adapter: deno_adapter()
     },
 
-    extensions: [".svelte"]
+    extensions: [".svelte", ".md"]
 };
-
-export default config;

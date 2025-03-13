@@ -1,13 +1,37 @@
 {
     "tasks": {
-        "dev": "vite dev --host",
+        "dev": "vite --host",
         "build": "vite build",
         "preview": "vite preview --host"
     },
     "imports": {
-        "@eslint/compat": "jsr:@eslint/compat@^1.2.7",
-        "@std/async": "jsr:@std/async@^1.0.10",
-        "@std/dotenv": "jsr:@std/dotenv@^0.225.3"
+        "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+        "@std/async": "jsr:@std/async@^1.0.11",
+        "@sveltejs/kit": "npm:@sveltejs/kit@^2.19.0",
+        "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.3",
+        "mdsvex": "npm:mdsvex@^0.12.3",
+        "svelte": "npm:svelte@^5.23.0",
+        "svelte-adapter-deno": "npm:svelte-adapter-deno@^0.9.1",
+        "vite": "npm:vite@^6.2.1",
+        "prettier": "npm:prettier@^3.5.3",
+        "prettier-plugin-svelte": "npm:prettier-plugin-svelte@^3.3.3",
+        "prettier-plugin-tailwindcss": "npm:prettier-plugin-tailwindcss@^0.6.11",
+        "tailwindcss": "npm:tailwindcss@^4.0.13",
+        "unplugin-icons": "npm:unplugin-icons@^22.1.0",
+        "@fontsource-variable/maven-pro": "npm:@fontsource-variable/maven-pro@^5.2.6",
+        "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.13",
+        "@fontsource-variable/comfortaa": "npm:@fontsource-variable/comfortaa@^5.2.5",
+        "@fontsource-variable/fira-code": "npm:@fontsource-variable/fira-code@^5.2.5",
+        "@iconify/json": "npm:@iconify/json@^2.2.316",
+        "@inlang/paraglide-js": "npm:@inlang/paraglide-js@2.0.0-beta.30",
+        "eslint": "npm:eslint@^9.22.0",
+        "eslint-plugin-svelte": "npm:eslint-plugin-svelte@^3.1.0",
+        "tailwind-scrollbar": "npm:tailwind-scrollbar@^4.0.1",
+        "@inlang/cli": "npm:@inlang/cli@^3.0.0",
+        "@types/deno": "npm:@types/deno@^2.2.0",
+        "vite-imagetools": "npm:vite-imagetools@^7.0.5",
+
+        "async_hooks": "node:async_hooks"
     },
     "nodeModulesDir": "auto"
 }

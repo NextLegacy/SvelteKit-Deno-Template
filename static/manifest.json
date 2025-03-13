@@ -1,0 +1,18 @@
+{
+    "lang": "en-us",
+    "name": "Hello World 🚀",
+    "short_name": "Hello World",
+    "description": "This is a SvelteKit + Deno 2.0 template I use for my projects.",
+    "author": "NextLegacy",
+    "start_url": "/",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "32x32"
+        }
+    ]
+}
