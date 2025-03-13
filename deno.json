@@ -1,7 +1,7 @@
 {
     "tasks": {
         "dev": "vite --host",
-        "build": "vite build",
+        "build": "vite build --host",
         "preview": "vite preview --host"
     },
     "imports": {
@@ -11,7 +11,6 @@
         "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.3",
         "mdsvex": "npm:mdsvex@^0.12.3",
         "svelte": "npm:svelte@^5.23.0",
-        "svelte-adapter-deno": "npm:svelte-adapter-deno@^0.9.1",
         "vite": "npm:vite@^6.2.1",
         "prettier": "npm:prettier@^3.5.3",
         "prettier-plugin-svelte": "npm:prettier-plugin-svelte@^3.3.3",
@@ -29,6 +28,10 @@
         "tailwind-scrollbar": "npm:tailwind-scrollbar@^4.0.1",
         "@inlang/cli": "npm:@inlang/cli@^3.0.0",
         "@types/deno": "npm:@types/deno@^2.2.0",
+        "@img/sharp-wasm32": "npm:@img/sharp-wasm32@^0.33.5",
+        "@sveltejs/adapter-node": "npm:@sveltejs/adapter-node@^5.2.12",
+        "sharp": "npm:sharp@^0.33.5",
+        "vite-imagetools": "npm:vite-imagetools@^7.0.5",
 
         "async_hooks": "node:async_hooks"
     },

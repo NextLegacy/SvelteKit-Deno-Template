@@ -117,7 +117,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <Github class="mr-2 inline" />
+                <Github class="mr-2 mb-1 inline" />
                 Go to Repo
             </a>
         </div>

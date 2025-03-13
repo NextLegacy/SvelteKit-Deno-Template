@@ -1,6 +1,6 @@
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
-import deno_adapter from "svelte-adapter-deno";
+import adapter from "@sveltejs/adapter-node";
 
 export default {
     preprocess: [
@@ -11,7 +11,7 @@ export default {
     ],
 
     kit: {
-        adapter: deno_adapter()
+        adapter: adapter()
     },
 
     extensions: [".svelte", ".md"]

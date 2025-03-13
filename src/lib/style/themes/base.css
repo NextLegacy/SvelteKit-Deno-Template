@@ -59,13 +59,13 @@
     --accent-900: #2f0426;
     --accent-950: #170213;
 
-    --base-font-size-sm: 0.75rem;
-    --base-font-size-base: 1rem;
-    --base-font-size-xl: 1.333rem;
-    --base-font-size-2xl: 1.777rem;
-    --base-font-size-3xl: 2.369rem;
-    --base-font-size-4xl: 3.158rem;
-    --base-font-size-5xl: 4.21rem;
+    --base-font-size-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --base-font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --base-font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --base-font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+    --base-font-size-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.5rem);
+    --base-font-size-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3.25rem);
+    --base-font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
 }
 .dark {
     --text-50: #020717;
