@@ -66,7 +66,7 @@
         }
     ];
 
-    import Image from "$lib/favicon.png?width=32&height=32&quality=100&format=png";
+    import Image from "$lib/favicon.png";
 </script>
 
 <button

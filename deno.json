@@ -29,9 +29,6 @@
         "tailwind-scrollbar": "npm:tailwind-scrollbar@^4.0.1",
         "@inlang/cli": "npm:@inlang/cli@^3.0.0",
         "@types/deno": "npm:@types/deno@^2.2.0",
-        "vite-imagetools": "npm:vite-imagetools@^7.0.5",
-        "@img/sharp-wasm32": "npm:@img/sharp-wasm32@0.33.5",
-        "sharp": "npm:sharp@0.33.5",
 
         "async_hooks": "node:async_hooks"
     },

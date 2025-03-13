@@ -8,6 +8,7 @@
     "npm:@fontsource-variable/maven-pro@^5.2.6": "5.2.6",
     "npm:@iconify/json@^2.2.316": "2.2.316",
     "npm:@img/sharp-wasm32@0.33.5": "0.33.5",
+    "npm:@img/sharp-wasm32@~0.33.5": "0.33.5",
     "npm:@inlang/cli@3": "3.0.3",
     "npm:@inlang/paraglide-js@2.0.0-beta.30": "2.0.0-beta.30",
     "npm:@sveltejs/kit@^2.19.0": "2.19.0_@sveltejs+vite-plugin-svelte@5.0.3__svelte@5.23.0___acorn@8.14.1__vite@6.2.1___lightningcss@1.29.2_svelte@5.23.0__acorn@8.14.1_vite@6.2.1__lightningcss@1.29.2",
@@ -21,12 +22,14 @@
     "npm:prettier-plugin-tailwindcss@~0.6.11": "0.6.11_prettier@3.5.3_prettier-plugin-svelte@3.3.3__prettier@3.5.3__svelte@5.23.0___acorn@8.14.1_svelte@5.23.0__acorn@8.14.1",
     "npm:prettier@^3.5.3": "3.5.3",
     "npm:sharp@0.33.5": "0.33.5",
+    "npm:sharp@~0.33.5": "0.33.5",
     "npm:svelte-adapter-deno@~0.9.1": "0.9.1_@sveltejs+kit@2.19.0__@sveltejs+vite-plugin-svelte@5.0.3___svelte@5.23.0____acorn@8.14.1___vite@6.2.1____lightningcss@1.29.2__svelte@5.23.0___acorn@8.14.1__vite@6.2.1___lightningcss@1.29.2_rollup@3.29.5_@sveltejs+vite-plugin-svelte@5.0.3__svelte@5.23.0___acorn@8.14.1__vite@6.2.1___lightningcss@1.29.2_svelte@5.23.0__acorn@8.14.1_vite@6.2.1__lightningcss@1.29.2",
     "npm:svelte@^5.23.0": "5.23.0_acorn@8.14.1",
     "npm:tailwind-scrollbar@^4.0.1": "4.0.1_tailwindcss@4.0.13",
     "npm:tailwindcss@^4.0.13": "4.0.13",
     "npm:unplugin-icons@^22.1.0": "22.1.0_svelte@5.23.0__acorn@8.14.1",
     "npm:vite-imagetools@^7.0.5": "7.0.5",
+    "npm:vite@*": "6.2.1",
     "npm:vite@6.2.1": "6.2.1",
     "npm:vite@^6.2.1": "6.2.1"
   },
@@ -1880,7 +1883,6 @@
       "npm:@fontsource-variable/fira-code@^5.2.5",
       "npm:@fontsource-variable/maven-pro@^5.2.6",
       "npm:@iconify/json@^2.2.316",
-      "npm:@img/sharp-wasm32@0.33.5",
       "npm:@inlang/cli@3",
       "npm:@inlang/paraglide-js@2.0.0-beta.30",
       "npm:@sveltejs/kit@^2.19.0",
@@ -1893,7 +1895,6 @@
       "npm:prettier-plugin-svelte@^3.3.3",
       "npm:prettier-plugin-tailwindcss@~0.6.11",
       "npm:prettier@^3.5.3",
-      "npm:sharp@0.33.5",
       "npm:svelte-adapter-deno@~0.9.1",
       "npm:svelte@^5.23.0",
       "npm:tailwind-scrollbar@^4.0.1",
@@ -1901,6 +1902,12 @@
       "npm:unplugin-icons@^22.1.0",
       "npm:vite-imagetools@^7.0.5",
       "npm:vite@^6.2.1"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@img/sharp-wasm32@~0.33.5",
+        "npm:sharp@~0.33.5"
+      ]
+    }
   }
 }
