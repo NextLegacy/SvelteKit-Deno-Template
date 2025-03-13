@@ -1,1 +1,8 @@
 /node_modules
+.svelte-kit
+/build
+/README.md
+tsconfig.json
+.prettierignore
+.prettierrc
+/.vscode
