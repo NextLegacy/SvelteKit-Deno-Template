@@ -13,7 +13,6 @@ FROM denoland/deno:alpine
 WORKDIR /app
 
 COPY --from=builder /app/build ./build
-COPY --from=builder /app/env.dev ./env.dev
 COPY --from=builder /app/deno.docker.json ./deno.json
 
 ENV DENO_ENV=production
