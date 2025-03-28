@@ -23,4 +23,4 @@ COPY --from=builder /app/deno.docker.json ./deno.json
 
 ENV DENO_ENV=production
 
-CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", "build/index.js"]
+CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", "--allow-sys", "build/index.js"]
