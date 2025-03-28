@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@import "$lib/assets/styles/tailwind.css";
+
+@import "@fontsource-variable/maven-pro";
+@import "@fontsource-variable/fira-code";
+@import "@fontsource-variable/comfortaa";
+@import "@fontsource-variable/roboto-slab";
+
+@layer base {
+    html {
+        @apply bg-background-50 text-text-950 scrollbar-hover:scrollbar-thumb-accent-300 scrollbar-track-background-50 scrollbar-thin scrollbar-thumb-accent-400 scroll-smooth;
+    }
+
+    body {
+        @apply bg-background-50 text-text-950 selection:bg-accent-600 selection:text-text-50;
+    }
+
+    @import "$lib/assets/styles/prose.css";
+    @import "$lib/assets/styles/themes/root.css";
+}

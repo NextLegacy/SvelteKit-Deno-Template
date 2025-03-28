@@ -67,7 +67,57 @@
     --font-size-4xl: var(--base-font-size-4xl);
     --font-size-5xl: var(--base-font-size-5xl);
 
-    --font-family-heading: "Comfortaa Variable", sans-serif;
-    --font-family-body: "Maven Pro Variable", sans-serif;
-    --font-family-code: "Fira Code Variable", monospace;
+    --font-family-heading: var(--base-font-family-heading);
+    --font-family-body: var(--base-font-family-body);
+    --font-family-mono: var(--base-font-family-mono);
+    --font-family-display: var(--base-font-family-display);
+    --font-family-serif: var(--base-font-family-serif);
+}
+
+@layer base {
+    :root {
+        --base-font-size-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+        --base-font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+        --base-font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+        --base-font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+        --base-font-size-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.5rem);
+        --base-font-size-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3.25rem);
+        --base-font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
+        --base-font-size-6xl: clamp(3.75rem, 3rem + 3.75vw, 6rem);
+
+        --base-font-family-serif: "Roboto Slab Variable", serif;
+        --base-font-family-mono: "Fira Code Variable", monospace;
+        --base-font-family-display: "Roboto Slab Variable", serif;
+        --base-font-family-body: "Maven Pro Variable", sans-serif;
+        --base-font-family-heading: "Comfortaa Variable", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-family-heading;
+    }
+
+    p,
+    span,
+    a,
+    blockquote,
+    code,
+    pre,
+    ol,
+    ul,
+    li,
+    table,
+    td,
+    th {
+        @apply font-family-body;
+    }
+
+    code,
+    pre {
+        @apply font-family-mono;
+    }
 }

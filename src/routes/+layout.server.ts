@@ -1,50 +1,64 @@
-export const load = () => {
+export const load = async () => {
+    const siteUrl = "";
+
     return {
         metadata: {
-            title: "Hello World 🚀",
-            favicon: "/favicon.png",
-            meta: {
-                description: "This is a SvelteKit + Deno 2.0 template I use for my projects.",
-                viewport: "width=device-width, initial-scale=1",
+            title: "Your Site Name",
+            description: "A comprehensive description of your website that is engaging and contains keywords",
+            author: "Your Name or Company",
+            keywords: "svelte, sveltekit, your, relevant, keywords",
 
-                mobile_web_app_capable: "yes",
-                apple_mobile_web_app_capable: "yes",
-                apple_mobile_web_app_status_bar_style: "default",
+            favicon: "/favicon.ico",
+            manifest: "/manifest.json",
 
-                canonical: "https://NextLegacy.de",
+            viewport: "width=device-width, initial-scale=1",
 
-                theme_color: "#000000",
+            canonical: siteUrl,
+            url: siteUrl,
 
-                og: {
-                    as: "website",
-                    type: "website",
-                    url: "NextLegacy.de",
-                    title: "NextLegacy.de",
-                    description: "This is a SvelteKit + Deno 2.0 template I use for my projects.",
-                    site_name: "NextLegacy.de",
-                    country_name: "Germany",
-                    email: "hey@nextlegacy.de",
-                    locale: "de_DE",
-                    image: {
-                        url: "/favicon.png",
-                        width: "32",
-                        height: "32"
-                    }
-                },
+            robots: "index,follow",
 
-                twitter: {
-                    card: "summary",
-                    site: "@NextLegacy",
-                    creator: "@NextLegacy",
-                    url: "NextLegacy.de",
-                    title: "NextLegacy.de",
-                    description: "This is a SvelteKit + Deno 2.0 template I use for my projects.",
-                    image: {
-                        url: "/favicon.png",
-                        alt: "NextLegacy.de"
-                    }
+            theme_color: "#000000",
+
+            mobile_web_app_capable: "yes",
+            apple_mobile_web_app_capable: "yes",
+            apple_mobile_web_app_status_bar_style: "black",
+
+            facebook_app_id: "",
+
+            og: {
+                type: "website",
+                site_name: "Your Site Name",
+                locale: "en_US",
+                image: {
+                    url: `${siteUrl}/favicon.png`,
+                    width: "1200",
+                    height: "630",
+                    alt: "Your Site Name"
+                }
+            },
+
+            twitter: {
+                card: "summary_large_image",
+                site: "@nextlegacyy",
+                creator: "@nextlegacyy",
+                image: {
+                    url: `${siteUrl}/favicon.png`,
+                    alt: "Your Site Name"
+                }
+            },
+
+            jsonLd: {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Your Site Name",
+                url: siteUrl,
+                potentialAction: {
+                    "@type": "SearchAction",
+                    target: `${siteUrl}/search?q={search_term_string}`,
+                    "query-input": "required name=search_term_string"
                 }
             }
-        } as MetaData
+        } satisfies Metadata as Metadata
     };
 };

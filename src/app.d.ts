@@ -1,23 +1,39 @@
 import "unplugin-icons/types/svelte";
 
 declare global {
-    // sharp does not work in deno yet https://github.com/lovell/sharp/issues/3912
-    // @ts-ignore
-    // declare module "*&format=webp";
-    // @ts-ignore
-    // declare module "*&format=png";
-    // @ts-ignore
-    // declare module "*?format=webp";
-    // @ts-ignore
-    // declare module "*?format=png";
+    declare module "*&format=webp";
+    declare module "*&format=png";
+    declare module "*?format=webp";
+    declare module "*?format=png";
 
-    type MetaData = import("$lib/types/metadata").MetaData;
+    declare module "*.md" {
+        import type { SvelteComponent } from "svelte";
+
+        export default class Comp extends SvelteComponent {}
+
+        export const metadata: Record<string, MarkdownMetaData>;
+    }
+
+    type Snippet = import("svelte").Snippet;
+    type Metadata = import("$lib/types/metadata").Metadata;
 
     namespace App {
-        interface Locals {}
-        interface PageData {
-            metadata: MetaData;
+        interface Error {
+            message: string;
+            status: number;
         }
+        interface Locals {
+            user: import("$lib/server/auth").SessionValidationResult["user"];
+            session: import("$lib/server/auth").SessionValidationResult["session"];
+        }
+
+        interface PageData {
+            metadata: Metadata;
+        }
+        interface PageState {
+            metadata: Metadata;
+        }
+        // interface Platform {}
     }
 }
 

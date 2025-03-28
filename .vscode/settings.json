@@ -1,13 +1,28 @@
 {
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.addMissingImports": "always"
+    },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "deno.enable": true,
     "deno.disablePaths": ["./src"],
     "files.associations": {
         "*.css": "tailwindcss"
     },
     "iconify.annotations": true,
     "iconify.inplace": false,
-    "iconifySearch.codeType": "unplugin-icons",
-    "iconifySearch.favorTabs": ["line-md"],
-    "iconifySearch.favorGroup": ""
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "deno.json": "deno.lock, package.json, .npmrc, tsconfig.json, eslint.config.js, .prettierrc, .prettierignore, .gitignore, Readme.md",
+        ".env": ".env.example",
+        "vite.config.ts": "svelte.config.js, drizzle.config.ts",
+        "+page.svelte": "+page.svelte, +page.server.ts, +page.ts",
+        "+layout.svelte": "+layout.svelte, +layout.server.ts, +layout.ts"
+    },
+    "files.exclude": {
+        "node_modules": true,
+        "build": true,
+        ".svelte-kit": true
+    }
 }
