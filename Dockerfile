@@ -1,12 +1,13 @@
 FROM denoland/deno:alpine AS builder
+RUN apk add --no-cache libstdc++
 
 WORKDIR /app
 
+COPY deno.json ./
+RUN deno cache deno.json
+
 COPY . .
-
-RUN apk add --no-cache libstdc++
-
-RUN deno task build --allow-scripts
+RUN deno task build
 
 FROM denoland/deno:alpine
 
