@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/dotenv@~0.225.3": "0.225.3",
     "npm:@eslint/compat@^1.2.7": "1.2.7_eslint@9.22.0",
     "npm:@eslint/js@^9.22.0": "9.22.0",
     "npm:@fontsource-variable/comfortaa@^5.2.5": "5.2.5",
@@ -53,6 +54,11 @@
     "npm:vite-plugin-kit-routes@~0.8.4": "0.8.4_@sveltejs+kit@2.20.1__@sveltejs+vite-plugin-svelte@5.0.3___svelte@5.23.2____acorn@8.14.1___vite@6.2.2____lightningcss@1.29.2__svelte@5.23.2___acorn@8.14.1__vite@6.2.2___lightningcss@1.29.2_@sveltejs+vite-plugin-svelte@5.0.3__svelte@5.23.2___acorn@8.14.1__vite@6.2.2___lightningcss@1.29.2_svelte@5.23.2__acorn@8.14.1_vite@6.2.2__lightningcss@1.29.2",
     "npm:vite@*": "6.2.2",
     "npm:vite@^6.2.2": "6.2.2"
+  },
+  "jsr": {
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    }
   },
   "npm": {
     "@ampproject/remapping@2.3.0": {
@@ -2621,6 +2627,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/dotenv@~0.225.3",
       "npm:@eslint/compat@^1.2.7",
       "npm:@eslint/js@^9.22.0",
       "npm:@fontsource-variable/comfortaa@^5.2.5",

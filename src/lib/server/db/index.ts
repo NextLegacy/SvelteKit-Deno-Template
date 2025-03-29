@@ -1,9 +1,9 @@
-// import { env } from "$env/dynamic/private";
+import { env } from "$env/dynamic/private";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
-import { env } from "node:process";
+import "jsr:@std/dotenv/load";
 
-const DATABASE_URL = env.DATABASE_URL;
+const DATABASE_URL = env["DATABASE_URL"];
 
 if (!DATABASE_URL) throw new Error("DATABASE_URL is not set");
 
