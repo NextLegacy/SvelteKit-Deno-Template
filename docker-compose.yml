@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                DATABASE_URL: ${DATABASE_URL}
+                VITE_DATABASE_URL: ${VITE_DATABASE_URL}
+        environment:
+            - DATABASE_URL=${DATABASE_URL}
+            - VITE_DATABASE_URL=${VITE_DATABASE_URL}
+        ports:
+            - "8080:8080"
+        command: ["deno", "run", "--allow-env", "--allow-net", "--allow-read", "--node-modules-dir", "build/index.js"]
