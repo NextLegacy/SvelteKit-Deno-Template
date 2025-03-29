@@ -11,7 +11,7 @@ console.log(process.env["VITE_DATABASE_URL"]);
 console.log(process.env.VITE_DATABASE_URL);
 console.log(import.meta.env.VITE_DATABASE_URL);
 
-const DATABASE_URL = import.meta.env.VITE_DATABASE_URL;
+const DATABASE_URL = Deno.env.get("DATABASE_URL");
 
 if (!DATABASE_URL) throw new Error("DATABASE_URL is not set");
 
