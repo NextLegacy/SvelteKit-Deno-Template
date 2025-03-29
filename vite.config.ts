@@ -35,8 +35,8 @@ export default defineConfig(() => {
         ] as PluginOption[],
         keepProcessEnv: true,
         define: {
-            "process.env.DATABASE_URL": JSON.stringify(process.env.DATABASE_URL),
-            "process.env.VITE_DATABASE_URL": JSON.stringify(process.env.VITE_DATABASE_URL)
+            DATABASE_URL: JSON.stringify(process.env.DATABASE_URL),
+            VITE_DATABASE_URL: JSON.stringify(process.env.VITE_DATABASE_URL)
         }
     };
 });
