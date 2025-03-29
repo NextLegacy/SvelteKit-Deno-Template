@@ -8,10 +8,6 @@ import { type PluginOption, defineConfig } from "vite";
 import { imagetools } from "vite-imagetools";
 import { kitRoutes } from "vite-plugin-kit-routes";
 
-import { load } from "jsr:@std/dotenv";
-
-console.log(await load({ export: true }));
-
 export default defineConfig({
     plugins: [
         sveltekit(),

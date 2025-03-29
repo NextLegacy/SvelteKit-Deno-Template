@@ -1,7 +1,7 @@
 import { env } from "$env/dynamic/private";
 import { neon } from "@neondatabase/serverless";
+import "dotenv/config";
 import { drizzle } from "drizzle-orm/neon-http";
-
 const DATABASE_URL = env["DATABASE_URL"];
 
 if (!DATABASE_URL) throw new Error("DATABASE_URL is not set");

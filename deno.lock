@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/dotenv@*": "0.225.3",
     "jsr:@std/dotenv@~0.225.3": "0.225.3",
     "npm:@eslint/compat@^1.2.7": "1.2.7_eslint@9.22.0",
     "npm:@eslint/js@^9.22.0": "9.22.0",
