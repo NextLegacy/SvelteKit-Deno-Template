@@ -1,7 +1,6 @@
 import { env } from "$env/dynamic/private";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
-import "jsr:@std/dotenv/load";
 
 const DATABASE_URL = env["DATABASE_URL"];
 
