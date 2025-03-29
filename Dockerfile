@@ -1,16 +1,16 @@
 FROM denoland/deno:alpine AS builder
 
-RUN apk add libstdc++
+RUN apk add --no-cache libstdc++
+
+RUN echo $DATABASE_URL
+RUN sh -c 'test -f .env || echo "DATABASE_URL=$DATABASE_URL" > .env'
 
 WORKDIR /app
 
-COPY deno.json .
-COPY deno.lock .
-
-RUN deno install
+COPY deno.json ./
+RUN deno cache deno.json
 
 COPY . .
-
 RUN deno task build
 
 FROM denoland/deno:alpine
@@ -18,9 +18,6 @@ FROM denoland/deno:alpine
 WORKDIR /app
 
 COPY --from=builder /app/build ./build
-
 COPY --from=builder /app/deno.docker.json ./deno.json
 
-ENV DENO_ENV=production
-
-CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", "build/index.js"]
+CMD ["deno", "run", "--allow-env", "--allow-net", "--allow-read", "--node-modules-dir", "build/index.js"]
