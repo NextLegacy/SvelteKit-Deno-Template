@@ -6,8 +6,8 @@ services:
             context: .
             dockerfile: Dockerfile
             args:
-                DATABASE_URL: ${DATABASE_URL}
-                VITE_DATABASE_URL: ${VITE_DATABASE_URL}
+                - DATABASE_URL=${DATABASE_URL}
+                - VITE_DATABASE_URL=${VITE_DATABASE_URL}
         environment:
             - DATABASE_URL=${DATABASE_URL}
             - VITE_DATABASE_URL=${VITE_DATABASE_URL}

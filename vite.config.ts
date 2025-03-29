@@ -32,6 +32,10 @@ export default defineConfig(() => {
                 filename: "stats.html"
             })
         ] as PluginOption[],
-        keepProcessEnv: true
+        keepProcessEnv: true,
+        define: {
+            "process.env.DATABASE_URL": JSON.stringify(process.env.DATABASE_URL),
+            "process.env.VITE_DATABASE_URL": JSON.stringify(process.env.VITE_DATABASE_URL)
+        }
     };
 });
