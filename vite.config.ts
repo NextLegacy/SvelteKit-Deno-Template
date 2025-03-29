@@ -2,12 +2,14 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { svelteInspector } from "@sveltejs/vite-plugin-svelte-inspector";
 import tailwindcss from "@tailwindcss/vite";
-import "jsr:@std/dotenv/load";
+import { config } from "dotenv";
 import { visualizer } from "rollup-plugin-visualizer";
 import Icons from "unplugin-icons/vite";
 import { type PluginOption, defineConfig } from "vite";
 import { imagetools } from "vite-imagetools";
 import { kitRoutes } from "vite-plugin-kit-routes";
+
+config();
 
 export default defineConfig(() => {
     return {
