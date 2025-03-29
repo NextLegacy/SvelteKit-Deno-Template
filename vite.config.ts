@@ -1,12 +1,16 @@
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
-import tailwindcss from "@tailwindcss/vite";
 import { sveltekit } from "@sveltejs/kit/vite";
-import Icons from "unplugin-icons/vite";
-import { imagetools } from "vite-imagetools";
 import { svelteInspector } from "@sveltejs/vite-plugin-svelte-inspector";
-import { type PluginOption, defineConfig } from "vite";
-import { kitRoutes } from "vite-plugin-kit-routes";
+import tailwindcss from "@tailwindcss/vite";
 import { visualizer } from "rollup-plugin-visualizer";
+import Icons from "unplugin-icons/vite";
+import { type PluginOption, defineConfig } from "vite";
+import { imagetools } from "vite-imagetools";
+import { kitRoutes } from "vite-plugin-kit-routes";
+
+import { load } from "jsr:@std/dotenv";
+
+console.log(await load({ export: true }));
 
 export default defineConfig({
     plugins: [
