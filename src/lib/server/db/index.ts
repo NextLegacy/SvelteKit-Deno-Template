@@ -7,6 +7,7 @@ console.log(Deno.env.get("DATABASE_URL"));
 console.log(env["DATABASE_URL"]);
 console.log(process.env["DATABASE_URL"]);
 console.log(process.env.DATABASE_URL);
+console.log(import.meta.env.DATABASE_URL);
 
 const DATABASE_URL = env["DATABASE_URL"];
 
