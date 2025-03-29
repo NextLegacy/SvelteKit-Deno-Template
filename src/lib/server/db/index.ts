@@ -1,6 +1,7 @@
-import { env } from "$env/dynamic/private";
+// import { env } from "$env/dynamic/private";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
+import { env } from "node:process";
 
 const DATABASE_URL = env.DATABASE_URL;
 
