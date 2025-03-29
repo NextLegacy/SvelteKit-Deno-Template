@@ -30,5 +30,6 @@ export default defineConfig({
             filename: "stats.html"
         })
     ] as PluginOption[],
-    keepProcessEnv: true
+    keepProcessEnv: true,
+    envPrefix: ""
 });
