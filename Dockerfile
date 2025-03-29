@@ -1,5 +1,6 @@
 FROM denoland/deno:alpine AS builder
 RUN apk add --no-cache libstdc++
+ENV DENO_ENV=production
 
 WORKDIR /app
 
@@ -16,6 +17,5 @@ WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/deno.docker.json ./deno.json
 
-ENV DENO_ENV=production
 
-CMD deno run -A build/index.js
+CMD ["deno", "run", "--allow-env", "--allow-net", "--allow-read", "--node-modules-dir", "build/index.js"]

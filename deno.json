@@ -1,7 +1,7 @@
 {
     "tasks": {
         "dev": "deno run -A npm:vite dev",
-        "build": "deno run -A npm:vite build",
+        "build": "deno run -A --node-modules-dir npm:vite build",
         "preview": "deno run -A npm:vite preview",
         "prepare": "svelte-kit sync || echo ''",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
