@@ -29,5 +29,6 @@ export default defineConfig({
             emitFile: true,
             filename: "stats.html"
         })
-    ] as PluginOption[]
+    ] as PluginOption[],
+    keepProcessEnv: true
 });
