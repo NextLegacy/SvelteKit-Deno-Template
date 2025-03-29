@@ -2,6 +2,10 @@ FROM denoland/deno:alpine AS builder
 RUN apk add --no-cache libstdc++
 ENV DENO_ENV=production
 
+ARG DATABASE_URL
+
+ENV DATABASE_URL=$DATABASE_URL
+
 WORKDIR /app
 
 COPY deno.json ./
