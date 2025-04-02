@@ -1,7 +1,7 @@
 import { sequence } from "@sveltejs/kit/hooks";
-import * as auth from "$lib/server/auth.js";
-import type { Handle } from "@sveltejs/kit";
+// import * as auth from "$lib/server/auth.js";
 import { paraglideMiddleware } from "$lib/paraglide/server";
+import type { Handle } from "@sveltejs/kit";
 
 const handleParaglide: Handle = ({ event, resolve }) => {
     return paraglideMiddleware(event.request, ({ locale }) => {
@@ -12,23 +12,23 @@ const handleParaglide: Handle = ({ event, resolve }) => {
 };
 
 const handleAuth: Handle = async ({ event, resolve }) => {
-    const sessionToken = event.cookies.get(auth.sessionCookieName);
-    if (!sessionToken) {
-        event.locals.user = null;
-        event.locals.session = null;
-        return resolve(event);
-    }
+    // const sessionToken = event.cookies.get(auth.sessionCookieName);
+    // if (!sessionToken) {
+    //     event.locals.user = null;
+    //     event.locals.session = null;
+    //     return resolve(event);
+    // }
 
-    const { session, user } = await auth.validateSessionToken(sessionToken);
+    // const { session, user } = await auth.validateSessionToken(sessionToken);
 
-    if (session) {
-        auth.setSessionTokenCookie(event, sessionToken, session.expiresAt);
-    } else {
-        auth.deleteSessionTokenCookie(event);
-    }
+    // if (session) {
+    //     auth.setSessionTokenCookie(event, sessionToken, session.expiresAt);
+    // } else {
+    //     auth.deleteSessionTokenCookie(event);
+    // }
 
-    event.locals.user = user;
-    event.locals.session = session;
+    // event.locals.user = user;
+    // event.locals.session = session;
 
     return resolve(event);
 };
