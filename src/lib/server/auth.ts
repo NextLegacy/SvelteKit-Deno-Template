@@ -1,4 +1,4 @@
-import { db } from "$lib/server/db";
+import { db } from "$lib/server/db/index.server";
 import * as table from "$lib/server/db/schema/user";
 import { sha256 } from "@oslojs/crypto/sha2";
 import { encodeBase64url, encodeHexLowerCase } from "@oslojs/encoding";
