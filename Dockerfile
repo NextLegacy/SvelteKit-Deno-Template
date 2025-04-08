@@ -1,9 +1,9 @@
 FROM denoland/deno:alpine AS builder
 
-RUN apk add --no-cache libstdc++
+ARG DATABASE_URL
+ENV DATABASE_URL=$DATABASE_URL
 
-RUN echo $DATABASE_URL
-RUN sh -c 'test -f .env || echo "DATABASE_URL=$DATABASE_URL" > .env'
+RUN apk add --no-cache libstdc++
 
 WORKDIR /app
 
