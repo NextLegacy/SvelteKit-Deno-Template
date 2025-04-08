@@ -22,4 +22,4 @@ WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/deno.docker.json ./deno.json
 
-CMD ["deno", "run", "--allow-env", "--allow-net", "--allow-read", "--node-modules-dir", "build/index.js"]
+CMD ["deno", "run", "--allow-env", "--allow-net", "--allow-read", "--env-file", ".env", "--node-modules-dir", "build/index.js"]
