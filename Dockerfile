@@ -7,6 +7,8 @@ RUN apk add --no-cache libstdc++
 
 WORKDIR /app
 
+RUN echo DATABASE_URL=$DATABASE_URL > .env
+
 COPY deno.json ./
 RUN deno cache deno.json
 
