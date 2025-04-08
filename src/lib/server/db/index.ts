@@ -2,15 +2,13 @@ import { drizzle } from "drizzle-orm/neon-http";
 
 import { neon } from "@neondatabase/serverless";
 
-import { env } from "$env/dynamic/private";
+import dotenv from "dotenv";
 
-await new Promise((resolve) => {
-    while (!env.DATABASE_URL) {
-        setTimeout(resolve, 10);
-    }
-    resolve(true);
-});
+dotenv.config();
 
-const client = neon(env.DATABASE_URL);
+console.log("Connecting to Neon database...");
+console.log("DATABASE_URL", process.env.DATABASE_URL);
+
+const client = neon(process.env.DATABASE_URL!);
 
 export const db = drizzle(client);
