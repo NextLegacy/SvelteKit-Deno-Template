@@ -5,6 +5,8 @@
     import { Canvas } from "@threlte/core";
     import { animate, stagger } from "motion";
 
+    const { data } = $props();
+
     const metrics = [
         { name: "Performance", score: 100 },
         { name: "Accessibility", score: 100 },
@@ -47,6 +49,10 @@
         );
     });
 </script>
+
+<p>
+    {data.DATABASE_URL}
+</p>
 
 <section class="py-32">
     <div class="mb-20 text-center">

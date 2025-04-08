@@ -4,6 +4,8 @@
 // console.log(process.env.DATABASE_URL);
 // console.log(import.meta.env.DATABASE_URL);
 
+import { env } from "$env/dynamic/private";
+
 // console.log(Deno.env.get("VITE_DATABASE_URL"));
 // console.log(process.env["VITE_DATABASE_URL"]);
 // console.log(process.env.VITE_DATABASE_URL);
@@ -16,3 +18,5 @@
 // const client = neon(DATABASE_URL);
 
 // export const db = drizzle(client);
+
+export const DATABASE_URL = env.DATABASE_URL;
