@@ -50,10 +50,6 @@
     });
 </script>
 
-<p>
-    {data.DATABASE_URL}
-</p>
-
 <section class="py-32">
     <div class="mb-20 text-center">
         <h2 class="text-primary-600 mb-6 text-3xl font-bold md:text-5xl">NextLegacy Tech Stack</h2>

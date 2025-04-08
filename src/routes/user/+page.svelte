@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
     import { enhance } from "$app/forms";
     import type { PageServerData } from "./$types";
 
@@ -9,4 +9,4 @@
 <p>Your user ID is {data.user.id}.</p>
 <form method="post" action="?/logout" use:enhance>
     <button>Sign out</button>
-</form> -->
+</form>
