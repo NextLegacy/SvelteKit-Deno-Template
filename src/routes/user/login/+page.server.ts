@@ -1,5 +1,5 @@
 import * as auth from "$lib/server/auth";
-import { db } from "$lib/server/db";
+import { db } from "$lib/server/db/index.server";
 import * as table from "$lib/server/db/schema/user";
 import { encodeBase32LowerCase } from "@oslojs/encoding";
 import { fail, redirect } from "@sveltejs/kit";
