@@ -27,6 +27,7 @@
     "npm:@threlte/rapier@^3.1.0": "3.1.0_@dimforge+rapier3d-compat@0.15.0_svelte@5.23.2__acorn@8.14.1_three@0.174.0",
     "npm:@types/jsonld@^1.5.15": "1.5.15",
     "npm:argon2@~0.41.1": "0.41.1",
+    "npm:dotenv@^16.4.7": "16.4.7",
     "npm:drizzle-kit@~0.30.5": "0.30.5_esbuild@0.19.12",
     "npm:drizzle-orm@~0.40.1": "0.40.1_@neondatabase+serverless@0.10.4",
     "npm:eslint-config-prettier@^10.1.1": "10.1.1_eslint@9.22.0",
@@ -1283,6 +1284,9 @@
     },
     "devalue@5.1.1": {
       "integrity": "sha512-maua5KUiapvEwiEAe+XnlZ3Rh0GD+qI1J/nb9vrJc3muPXvcF/8gXYTWF76+5DAqHyDUtOIImEuo0YKE9mshVw=="
+    },
+    "dotenv@16.4.7": {
+      "integrity": "sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ=="
     },
     "drizzle-kit@0.30.5_esbuild@0.19.12": {
       "integrity": "sha512-l6dMSE100u7sDaTbLczibrQZjA35jLsHNqIV+jmhNVO3O8jzM6kywMOmV9uOz9ZVSCMPQhAZEFjL/qDPVrqpUA==",
@@ -2671,6 +2675,11 @@
       "npm:vite-imagetools@^7.0.5",
       "npm:vite-plugin-kit-routes@~0.8.4",
       "npm:vite@^6.2.2"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:dotenv@^16.4.7"
+      ]
+    }
   }
 }
