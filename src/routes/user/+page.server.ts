@@ -1,7 +1,7 @@
 import * as auth from "$lib/server/auth";
+import { route } from "$lib/utils/routes";
 import { fail, redirect } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
-import { route } from "$lib/utils/routes";
 
 export const load: PageServerLoad = async (event) => {
     if (!event.locals.user) {

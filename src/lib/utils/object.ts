@@ -1,4 +1,6 @@
-import { isObject } from "./utils";
+export function isObject(item: unknown): boolean {
+    return item !== null && typeof item === "object" && !Array.isArray(item);
+}
 
 /**
  * Deeply merges two objects, recursively combining their properties

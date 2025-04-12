@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import { deepMerge } from "$lib/utils/merge";
+    import { deepMerge } from "$lib/utils/object";
     import type { JsonLd } from "jsonld/jsonld-spec";
 
     interface Props {
@@ -10,10 +10,6 @@
     let { layoutMetadata }: Props = $props();
 
     const metadata = $derived(deepMerge(layoutMetadata, page.data.metadata || {}));
-
-    $effect(() => {
-        console.log(metadata);
-    });
 </script>
 
 {#snippet meta_name(name: string, content: string | undefined)}
@@ -36,6 +32,7 @@
 
 <svelte:head>
     <title>{metadata.title}</title>
+    {@html `<meta name="robots" content="${metadata.robots}" />`}
     {#if metadata.canonical}
         <link rel="canonical" href={metadata.canonical} />
     {/if}
@@ -44,11 +41,7 @@
         <link rel="manifest" href={metadata.manifest} />
     {/if}
 
-    {@html `<meta charset="utf-8" />`}
-    {@html `<meta name="robots" content="${metadata.robots}" />`}
-
     {@render meta_name("description", metadata.description)}
-    {@render meta_name("viewport", metadata.viewport)}
     {@render meta_name("author", metadata.author)}
     {@render meta_name("keywords", metadata.keywords)}
     {@render meta_name("mobile-web-app-capable", metadata.mobile_web_app_capable)}

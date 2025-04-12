@@ -1,10 +1,10 @@
-import { hash, verify } from "argon2";
+import * as auth from "$lib/server/auth";
+import { db } from "$lib/server/db/index";
+import * as table from "$lib/server/db/schema/user";
 import { encodeBase32LowerCase } from "@oslojs/encoding";
 import { fail, redirect } from "@sveltejs/kit";
+import { hash, verify } from "argon2";
 import { eq } from "drizzle-orm";
-import * as auth from "$lib/server/auth";
-import { db } from "$lib/server/db";
-import * as table from "$lib/server/db/schema/user";
 import type { Actions, PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (event) => {

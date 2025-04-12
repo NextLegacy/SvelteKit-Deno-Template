@@ -15,7 +15,7 @@
 
         <div class="flex items-center space-x-5">
             <a
-                href="https://github.com/NextLegacy/SvelteKit-Deno-Template"
+                href="https://github.com/nextlegacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-text-800 hover:text-primary-600 transition-colors"

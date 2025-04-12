@@ -1,5 +1,5 @@
-import type { PageServerLoad } from "./$types";
 import type { Metadata } from "$lib/types/metadata";
+import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {
     return {

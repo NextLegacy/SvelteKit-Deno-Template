@@ -11,8 +11,6 @@ export const load = async () => {
             favicon: "/favicon.ico",
             manifest: "/manifest.json",
 
-            viewport: "width=device-width, initial-scale=1",
-
             canonical: siteUrl,
             url: siteUrl,
 

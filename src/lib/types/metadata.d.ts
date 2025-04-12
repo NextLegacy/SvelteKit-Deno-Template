@@ -8,8 +8,6 @@ export interface Metadata {
 
     keywords?: string;
 
-    viewport?: string;
-
     author?: string;
 
     mobile_web_app_capable?: "yes" | "no";
