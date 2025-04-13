@@ -3,14 +3,15 @@
     import InjectTheme from "$lib/components/InjectTheme.svelte";
 
     import "$lib/assets/styles/app.css";
-    import Header from "$lib/components/Header.svelte";
     import Footer from "$lib/components/Footer.svelte";
+    import Header from "$lib/components/Header.svelte";
 
     let { children, data } = $props();
 </script>
 
-<InjectTheme />
 <InjectMetadata layoutMetadata={data.metadata} />
+
+<InjectTheme />
 
 <div class="bg-background-50 text-text-950 flex min-h-screen flex-col">
     <Header />
