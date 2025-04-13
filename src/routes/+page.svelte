@@ -56,14 +56,14 @@
 
     <div class="mb-28 px-6">
         <div class="border-primary-500 bg-background-100/50 mx-auto max-w-4xl overflow-hidden rounded-2xl border shadow-lg">
-            {#await import("@threlte/core") then { Canvas }}
+            {#await import("@threlte/core")}
+                <canvas class="h-full w-full"></canvas>
+            {:then { Canvas }}
                 <Canvas>
                     {#await import("$lib/components/ThreeDScene.svelte") then { default: ThreeDScene }}
                         <ThreeDScene />
                     {/await}
                 </Canvas>
-            {:catch error}
-                <div class="text-text-700 flex h-[400px] items-center justify-center">Error loading 3D scene: {error.message}</div>
             {/await}
         </div>
     </div>
